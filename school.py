@@ -2,8 +2,7 @@
 
 def students_from_city(db, city):
     """return a list of students from a specific city"""
-    query= f"SELECT * FROM students WHERE birth_city LIKE '{city}'"
-    db.execute(query)
+    db.execute( f"SELECT * FROM students WHERE birth_city LIKE '{city}' ")
     results = db.fetchall()
     return results
 
